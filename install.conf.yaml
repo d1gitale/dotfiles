@@ -1,8 +1,17 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+
 - clean: ['~']
 
 - link:
     ~/.bash_profile: bash_profile
     ~/.bashrc: bashrc
     ~/.bash_logout: bash_logout
-
+    ~/.config/hypr: config/hypr
+    ~/.config/nvim: config/nvim
+    ~/.config/omarchy: config/omarchy
+    ~/.config/waybar: config/waybar
+    ~/.config/walker: config/walker
 
