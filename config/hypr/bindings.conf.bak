@@ -1,0 +1,21 @@
+# Application bindings
+$terminal = uwsm app -- $TERMINAL
+$browser = zen-browser
+
+bindd = SUPER, return, Terminal, exec, $terminal --working-directory="$(omarchy-cmd-terminal-cwd)"
+bindd = SUPER, N, File manager, exec, uwsm app -- nautilus --new-window
+bindd = SUPER, B, Browser, exec, $browser
+bindd = SUPER SHIFT, B, Browser (private), exec, $browser --private-window
+bindd = SUPER, M, Music, exec, omarchy-launch-or-focus spotify
+bindd = SUPER, V, Editor, exec, omarchy-launch-editor
+# bindd = SUPER, T, Activity, exec, $terminal -e btop
+bindd = SUPER, T, Telegram, exec, omarchy-launch-or-focus ~/Downloads/tsetup.6.1.4/Telegram/Telegram
+# bindd = SUPER, D, Docker, exec, $terminal -e lazydocker
+bindd = SUPER, D, Discord, exec, omarchy-launch-or-focus discord
+# bindd = SUPER, O, Obsidian, exec, omarchy-launch-or-focus obsidian "uwsm app -- obsidian -disable-gpu --enable-wayland-ime"
+# bindd = SUPER, slash, Passwords, exec, uwsm app -- 1password
+
+
+# Overwrite existing bindings, like putting Omarchy Menu on Super + Space
+# unbind = SUPER, SPACE
+# bindd = SUPER, SPACE, Omarchy menu, exec, omarchy-menu

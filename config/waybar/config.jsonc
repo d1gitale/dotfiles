@@ -1,19 +1,19 @@
 {
   "reload_style_on_change": true,
-  "layer": "top",
+  "layer": "bottom",
   "position": "top",
   "spacing": 0,
-  "height": 26,
-  "modules-left": ["custom/omarchy", "hyprland/workspaces"],
-  "modules-center": ["custom/todo", "clock", "custom/update", "custom/screenrecording-indicator"],
+  "height": 30,
+  "modules-left": ["custom/omarchy", "hyprland/workspaces", "custom/todo"],
+  "modules-center": ["custom/spotify", "custom/cava", "custom/update", "custom/screenrecording-indicator"],
   "modules-right": [
-    "custom/spotify",
     "group/tray-expander",
     "bluetooth",
     "network",
     "pulseaudio",
     "cpu",
-    "battery"
+    "battery",
+    "clock"
   ],
   "hyprland/workspaces": {
     "on-click": "activate",
@@ -69,7 +69,7 @@
         "today": "<b><big>{}</big></b>"
       }
     },
-    "on-click-right": "omarchy-cmd-tzupdate"
+    "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
   },
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
@@ -85,7 +85,7 @@
     "on-click": "omarchy-launch-wifi"
   },
   "battery": {
-    "format": "{capacity}% {icon}",
+    "format": "{icon}",
     "format-discharging": "{icon}",
     "format-charging": "{icon}",
     "format-plugged": "",
@@ -147,13 +147,17 @@
     "exec": "/usr/bin/python3 ~/.config/waybar/scripts/mediaplayer.py --player spotify",
     "format": "{}",
     "return-type": "json",
-    "on-click": "playerctl play-pause"
+    "on-click": "playerctl play-pause --player=spotify"
   },
   "custom/todo": {
     "exec": "~/.config/waybar/scripts/todo.sh",
     "return-type": "json",
     "format": " {}",
     "on-click": "ghostty -e calcurse",
-    "interval": 5,
+    "interval": 5
+  },
+  "custom/cava": {
+    "format": "{}",
+    "exec": "~/.config/waybar/scripts/cava.sh"
   }
 }
