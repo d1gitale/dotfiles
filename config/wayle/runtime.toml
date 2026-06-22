@@ -1,0 +1,65 @@
+[bar]
+scale = 0.949999988079071
+inset-ends = 7.5
+background-opacity = 91
+rounding = "sm"
+
+[[bar.layout]]
+monitor = "*"
+show = true
+left = [
+    "hyprland-workspaces",
+    "media",
+]
+center = ["clock"]
+right = [
+    "systray",
+    "bluetooth",
+    "cpu",
+    "volume",
+    "battery",
+    "hyprsunset",
+]
+
+[styling]
+theme-provider = "pywal"
+theming-monitor = "DP-1"
+pywal-light = true
+
+[modules.bluetooth]
+label-show = false
+
+[modules.clock]
+format = "%a %d %H:%M"
+
+[modules.cpu]
+left-click = """hyprctl dispatch 'hl.dsp.exec_cmd("ghostty -e btop", { float = true })'"""
+
+[modules.hyprland-workspaces]
+min-workspace-count = 5
+monitor-specific = false
+show-special = false
+display-mode = "none"
+app-icons-show = true
+app-icons-empty = "radio-checked"
+active-color = "status-warning"
+
+[modules.hyprsunset]
+label-show = false
+
+[modules.media]
+players-ignored = [
+    "zen",
+    "firefox",
+    "Mozilla zen",
+    "Zen Browser",
+]
+player-priority = ["Spotify"]
+label-show = false
+
+[modules.weather]
+location = "Moscow"
+
+[wallpaper]
+engine-enabled = false
+transition-duration = 0.4000000059604645

@@ -1,1 +1,0 @@
-/home/digitale/.config/omarchy/current/theme/neovim.lua
