@@ -78,6 +78,7 @@ hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true 
 ---- SCREENSHOTS/RECS ----
 --------------------------
 hl.bind("CTRL + PRINT", hl.dsp.exec_cmd("grimblast copysave screen"))
+hl.bind("CTRL + ALT + PRINT", hl.dsp.exec_cmd("wf-recorder -f ~/Videos/recording.mp4"))
 
 ------------------
 ---- SHUTDOWN ----
