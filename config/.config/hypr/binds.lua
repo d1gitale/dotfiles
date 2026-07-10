@@ -10,6 +10,7 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(defaults.fileManager))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(defaults.menu))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(defaults.browser))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("discord --enable-features=UseOzonePlatform --ozone-platform=wayland"))
+hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("skwd wall toggle"))
 
 -----------------
 ---- WINDOWS ----
