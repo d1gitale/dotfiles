@@ -1,0 +1,109 @@
+{
+  "compositor": "niri",
+  "monitor": "",
+  "general": {
+    "locale": "",
+    "closeOnSelection": false,
+    "reopenAtLastSelection": false,
+    "uiScale": 1
+  },
+  "paths": {
+    "wallpaper": "~/Pictures/Wallpapers",
+    "videoWallpaper": "~/videowalls",
+    "cache": "",
+    "templates": "",
+    "scripts": "",
+    "steam": "",
+    "steamWorkshop": "",
+    "steamWeAssets": ""
+  },
+  "features": {
+    "matugen": true,
+    "ollama": false,
+    "steam": false,
+    "wallhaven": false
+  },
+  "colorSource": "magick",
+  "ollama": {
+    "url": "http://localhost:11434",
+    "model": "gemma3:4b",
+    "consolidateEnabled": true
+  },
+  "steam": {
+    "apiKey": "",
+    "username": ""
+  },
+  "wallhaven": {
+    "apiKey": ""
+  },
+  "matugen": {
+    "schemeType": "scheme-content",
+    "mode": "light"
+  },
+  "integrations": [
+    {
+      "_comment": "Built-in: MD3 colors for the shell UI (always needed)",
+      "name": "skwd-wall",
+      "template": "quickshell-colors.json",
+      "output": "colors.json"
+    },
+    {
+      "name": "ghostty",
+      "template": "ghostty.conf",
+      "output": "~/.config/ghostty/skwd-theme",
+      "reload": "pkill -USR2 ghostty"
+    },
+    {
+      "name": "spicetify",
+      "template": "spicetify.ini",
+      "output": "~/.config/spicetify/Themes/Matugen/color.ini",
+      "reload": "~/.config/skwd-wall/scripts/reload-spicetify.sh"
+    },
+    {
+      "name": "spicetify-css",
+      "template": "spicetify.css",
+      "output": "~/.config/spicetify/Themes/Matugen/user.css"
+    },
+    {
+      "_comment": "Update output path with your Zen browser profile directory",
+      "name": "zen",
+      "template": "zen.css",
+      "output": "~/.config/zen/PROFILE_DIR/chrome/userChrome.css"
+    },
+    {
+      "name": "wa",
+      "template": "",
+      "output": ""
+    }
+  ],
+  "components": {
+    "wallpaperSelector": {
+      "displayMode": "slices",
+      "sliceSpacing": -30,
+      "hexScrollStep": 1,
+      "customPresets": {}
+    }
+  },
+  "wallpaperMute": true,
+  "pickOnlyMode": false,
+  "externalWallpaperCommand": "",
+  "postProcessing": [],
+  "performance": {
+    "imageOptimizePreset": "balanced",
+    "imageOptimizeResolution": "2k",
+    "videoConvertPreset": "balanced",
+    "videoConvertResolution": "2k",
+    "autoOptimizeImages": false,
+    "autoConvertVideos": false,
+    "imageTrashDays": 7,
+    "videoTrashDays": 7,
+    "autoDeleteImageTrash": false,
+    "autoDeleteVideoTrash": false
+  },
+  "paper": {
+    "engine": "awww",
+    "awww": {
+      "transitionType": "any"
+    }
+  }
+}
